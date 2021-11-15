@@ -4,8 +4,10 @@
       <div class="flex items-center gap-x-4">
         <img class="w-14" src="../assets/images/dumbbell-light.png" alt="" />
         <h1 class="text-lg">Workout Tracker</h1>
+        <h1 class="text-lg"><a href="https://cutlerwater-gym-website.netlify.app/">Gym Site</a></h1>
       </div>
       <ul class="flex flex-1 justify-end gap-x-10">
+        <li v-if="user" @click="logout" class="cursor-pointer">Gym Site</li>
         <router-link class="cursor-pointer" :to="{ name: 'Home' }">Home</router-link>
         <router-link v-if="user" class="cursor-pointer" :to="{ name: 'Create' }"
           >Create</router-link
